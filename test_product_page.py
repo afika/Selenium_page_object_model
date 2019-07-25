@@ -56,7 +56,9 @@ def test_guest_cant_see_product_in_cart_opened_from_product_page (browser):
     page.open()
     page.go_to_cart_page()
     cart_page = CartPage(browser, browser.current_url)
-    cart_page.should_be_cart_page()
+    cart_page.should_be_cart_url()
+    cart_page.should_be_empty()
+    cart_page.should_be_message_about_empty()
 
 
 @pytest.mark.login

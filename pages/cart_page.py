@@ -3,10 +3,6 @@ from .locators import CartPageLocators
 
 
 class CartPage(BasePage):
-    def should_be_cart_page(self):
-        self.should_be_cart_url()
-        self.should_be_empty()
-        self.should_be_message_about_empty()
 
     def should_be_cart_url(self):
         assert "/basket" in self.browser.current_url, "The page is not basket url"

@@ -25,5 +25,7 @@ class TestLoginFromMainPage(object):
 	    page.open()
 	    page.go_to_cart_page()
 	    cart_page = CartPage(browser, browser.current_url)
-	    cart_page.should_be_cart_page()
+	    cart_page.should_be_cart_url()
+	    cart_page.should_be_empty()
+	    cart_page.should_be_message_about_empty()
 
